@@ -66,6 +66,10 @@ body {
     aspect-ratio: 1/1;
 }
 
+.active {
+    background-color: lightblue;
+}
+
 
 /* FOOTER */
 footer {

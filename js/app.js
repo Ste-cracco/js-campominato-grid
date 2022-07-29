@@ -3,12 +3,16 @@
 function creazioneCella(i) {
     const divCella = document.createElement('div');
     divCella.classList.add('cella');
-    divCella.addEventListener('click', gestoreClick(i));
+    divCella.addEventListener('click', function() {
+        gestoreClick(i+1)
+        divCella.classList.add('active');
+    });
     return divCella;
 }
 
 function gestoreClick(i) {
-    console.log(i+1);
+    console.log(i);
+
 }
 // Fine Funzioni
 
@@ -21,8 +25,7 @@ buttonElement.addEventListener('click', function() {
     for(let i = 0; i < 100; i++) {        
         const cella = creazioneCella(i);
         cella.innerHTML = i + 1;
-        grigliaElement.append(cella); 
-               
+        grigliaElement.append(cella);                
     }
 });
 
